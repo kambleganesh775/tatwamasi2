@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/logo.jpeg" type="image/jpeg">
+<title>About Us | Tatwamasi Foundation</title>
+  <meta name="description" content="Learn about our story, co-founders, vision, mission, and the core principles guiding Tatwamasi Foundation in rural India.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Global & Main Style sheets -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <style>
+    .about-hero {
+      padding: 160px 0 80px 0;
+      background-color: var(--color-gray-50);
+      position: relative;
+    }
+    
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-hero h1 {
+      margin-bottom: 24px;
+    }
+    
+    .principles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+    
+    .principle-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-gray-100);
+      padding: 32px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition-smooth);
+    }
+    
+    .principle-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(21, 94, 239, 0.2);
+    }
+    
+    .principle-icon {
+      font-size: 28px;
+      color: var(--color-primary);
+      margin-bottom: 16px;
+      display: inline-block;
+    }
+    
+    .principle-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    
+    .principle-card p {
+      font-size: 15px;
+      color: var(--color-gray-600);
+      margin-bottom: 0;
+    }
+    
+    .vision-mission-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    
+    .vm-card {
+      padding: 48px;
+      border-radius: var(--radius-lg);
+      background-color: var(--color-white);
+      box-shadow: var(--shadow-premium);
+      border: 1px solid var(--color-gray-100);
+    }
+    
+    .vm-icon {
+      font-size: 32px;
+      color: var(--color-primary);
+      margin-bottom: 24px;
+    }
+    
+    .vm-card p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+    
+    .about-cta {
+      text-align: center;
+      background-image: linear-gradient(rgba(17,24,39,0.9), rgba(17,24,39,0.95)), url('./assets/images/about-hero.jpg');
+      background-size: cover;
+      background-position: center;
+      padding: 120px 0;
+    }
+    
+    @media (max-width: 1024px) {
+      .principles-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .vision-mission-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-hero-grid,
+      .about-split-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .about-hero {
+        padding: 120px 0 40px 0;
+      }
+      .principles-grid {
+        grid-template-columns: 1fr;
+      }
+      .about-cta {
+        padding: 60px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="./index.html" class="logo" aria-label="Tatwamasi Foundation Home">
+        <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+        <span>Tatwamasi Foundation</span>
+      </a>
+      
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./about.html" class="nav-link active">About Us</a>
+        <div class="nav-dropdown">
+          <a href="./initiatives.html" class="nav-link dropdown-toggle">Our Initiatives <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="./education.html">Education</a>
+            <a href="./healthcare.html">Healthcare</a>
+            <a href="./sports.html">Sports Academy</a>
+            <a href="./music.html">Music & Arts</a>
+            <a href="./initiatives.html#environment">Environment</a>
+          </div>
+        </div>
+        <a href="./join.html" class="nav-link">Join Mission</a>
+        <a href="./contact.html" class="nav-link">Contact</a>
+        <button class="btn btn-primary" data-open-modal style="padding: 10px 24px; font-size:15px; margin-left: 10px;">Support Us</button>
+      </nav>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- About Hero Section -->
+    <section class="about-hero">
+      <div class="container">
+        <div class="about-hero-grid reveal">
+          <div>
+            <span class="tagline">Our Story</span>
+            <h1>A Vision Awakened</h1>
+            <p class="lead">Every lasting movement begins with a simple question: "What if we could awaken the potential in every child?" Tatwamasi Foundation was born from the belief that true change requires deep roots and bold vision.</p>
+          </div>
+          <div class="image-wrapper" style="aspect-ratio: 4/3; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-premium);">
+            <img src="./assets/images/about-hero.jpg" alt="Tatwamasi Foundation members and children in rural India" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Narrative Section -->
+    <section class="section" style="padding-top: 40px;">
+      <div class="container">
+        <div class="about-split-grid reveal" style="align-items: flex-start;">
+          <div class="reveal-left">
+            <p>Our founder witnessed the immense talent, resilience, and wisdom present in rural India's youth and communities, yet constrained by systemic barriers in education, healthcare, and opportunity.</p>
+            <p>Rather than view poverty as a problem to solve through rescue, we recognized it as a challenge to address through awakening. We asked: What if we could create spaces where a farmer's daughter learns not just survival, but mastery? Where a village child discovers not just literacy, but possibility?</p>
+            <p>That question became our foundation.</p>
+          </div>
+          <div class="reveal-right">
+            <p>Starting with after-school services and sports programs, Tatwamasi Foundation has grown into a multi-pillar organization reaching thousands of lives. Yet we've never scaled at the expense of depth. Every initiative maintains the intimacy of care paired with the ambition of scale.</p>
+            <div style="background-color:rgba(21, 94, 239, 0.05); padding: 32px; border-radius: var(--radius-md); border-left:4px solid var(--color-primary); margin-top:20px;">
+              <h4 style="margin-bottom:8px; color:var(--color-primary)">Did you know?</h4>
+              <p style="font-size:15px; margin-bottom:0; color:var(--color-gray-700)">Tatwamasi was established in 2022 in rural India. We run our operational focus directly from Mumbai while managing field operations directly with local leaders in the villages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="section" style="background-color: var(--color-gray-50);">
+      <div class="container">
+        <div class="vision-mission-grid reveal">
+          <div class="vm-card">
+            <div class="vm-icon"><i class="fas fa-eye"></i></div>
+            <h2 style="font-size:28px; margin-bottom:16px;">Our Vision</h2>
+            <p>An India where every child, regardless of circumstance, can discover and develop their fullest potential. Where communities are educated, healthy, creative, and environmentally conscious. Where the spark within each person becomes a flame illuminating the future.</p>
+          </div>
+          
+          <div class="vm-card">
+            <div class="vm-icon"><i class="fas fa-bullseye"></i></div>
+            <h2 style="font-size:28px; margin-bottom:16px;">Our Mission</h2>
+            <p>To empower needy and poor youth, children, and communities across rural India to realize their true potential through integrated programs in education, healthcare, sports, environmental stewardship, and cultural preservation.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Excellence Narrative Section -->
+    <section class="section">
+      <div class="container">
+        <div class="about-split-grid reveal">
+          <div class="image-wrapper" style="aspect-ratio: 4/3; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-premium);">
+            <img src="./assets/images/about-excellence.jpg" alt="Students celebrated for academic excellence" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <div>
+            <span class="tagline">Inspiring Performance</span>
+            <h2>Fostering Academic & Creative Excellence</h2>
+            <p>Our learners achieve high levels of competence because we combine rigorous classroom standards with personal care. At the Aditi Institute of Excellence, students don't just complete lessons—they engage in software coding, mathematics drills, and creative arts that expand their intellectual boundaries.</p>
+            <p>Through the support of our donors and volunteer teachers, we keep student-to-teacher ratios low and offer specialized resources like computer labs and musical instrument rooms. We guide youth step-by-step from foundational learning to advanced digital skills, paving the way for district, state, and national opportunities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Principles -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="tagline">Our Pillars</span>
+          <h2>Our Core Principles</h2>
+          <p class="lead">Six guiding rules that shape every decision, project, and investment we make.</p>
+        </div>
+        
+        <div class="principles-grid reveal">
+          <div class="principle-card">
+            <div class="principle-icon"><i class="fa-solid fa-lightbulb"></i></div>
+            <h3>Awakening, Not Rescuing</h3>
+            <p>We believe transformation awakens latent potential rather than rescues the vulnerable. Every human carries capability; our role is to illuminate it.</p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon"><i class="fa-solid fa-users"></i></div>
+            <h3>Community-Led</h3>
+            <p>Real change is designed and led by communities themselves. We partner with local wisdom-keepers, respect traditions, and follow the lead of those closest to the work.</p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon"><i class="fa-solid fa-child-reaching"></i></div>
+            <h3>Holistic Development</h3>
+            <p>Human flourishing is multi-dimensional. Education without health falters. Health without skills stagnates. That's why we address the whole person.</p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h3>Scale with Soul</h3>
+            <p>We reach thousands while maintaining the intimacy of care. Our programs are built for multiplicity but delivered with deep personal attention.</p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <h3>Evidence-Driven Impact</h3>
+            <p>We measure success not in vanity metrics, but in lives transformed. Every initiative is grounded in data, community feedback, and rigorous evaluation.</p>
+          </div>
+          
+          <div class="principle-card">
+            <div class="principle-icon"><i class="fa-solid fa-leaf"></i></div>
+            <h3>Sustainability</h3>
+            <p>We build for permanence, not dependence. Our programs strengthen local capacity and create long-term pathways to self-sufficiency.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Visual CTA Section -->
+    <section class="section section-dark about-cta reveal">
+      <div class="container">
+        <h2 style="margin-bottom: 24px;">Ready to Walk Alongside Us?</h2>
+        <p class="lead" style="max-width: 600px; margin-left: auto; margin-right: auto; margin-bottom: 40px; color: var(--color-gray-300);">Whether you donate monthly, volunteer your professional skills, or represent a corporate partner, your action fuels rural India's transformation.</p>
+        <div class="btn-group" style="justify-content: center;">
+          <a href="./join.html" class="btn btn-primary">Join as Volunteer</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo" style="color:var(--color-white)">
+            <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+            <span>Tatwamasi Foundation</span>
+          </a>
+          <p>Rooted in India, reaching every soul. A multi-pillar foundation empowering rural communities since 2022.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="./about.html">Our Story</a></li>
+            <li><a href="./initiatives.html">Our Initiatives</a></li>
+            <li><a href="./join.html">Get Involved</a></li>
+            <li><a href="./contact.html">Reach Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Our Initiatives</h4>
+          <ul>
+            <li><a href="./education.html">Education</a></li>
+            <li><a href="./healthcare.html">Healthcare</a></li>
+            <li><a href="./sports.html">Sports Academy</a></li>
+            <li><a href="./music.html">SurSadhanalay</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Headquarters</h4>
+          <p style="color:var(--color-gray-400); font-size:15px; line-height:1.5;">
+            1002 A-Wing Evershine Embassy, CHSL Veera, Desai Rd, Opp. Country Club, Andheri West, Mumbai - 400053
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tatwamasi Foundation. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Donation Checkout Modal -->
+  <div id="donation-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Support Tatwamasi Foundation</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="modal-donation-form">
+          <p class="lead" style="font-size:15px; margin-bottom:20px;">Your support directly funds schools, healthcare drives, and athletic training in rural India.</p>
+          
+          <div class="form-group">
+            <label>Select Donation Amount (INR)</label>
+            <div class="donation-grid">
+              <button type="button" class="btn-amt" data-amount="1000">₹1,000</button>
+              <button type="button" class="btn-amt active" data-amount="2500">₹2,500</button>
+              <button type="button" class="btn-amt" data-amount="5000">₹5,000</button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="custom-amount">Or enter custom amount (₹)</label>
+            <input type="number" id="custom-amount" class="form-control" value="2500" min="100" placeholder="Custom Amount">
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-name">Your Full Name*</label>
+            <input type="text" id="donor-name" class="form-control" placeholder="Arijit Sen" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-email">Your Email Address*</label>
+            <input type="email" id="donor-email" class="form-control" placeholder="sen@example.com" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top:10px;">Proceed to Secure Checkout</button>
+        </form>
+        
+        <div id="modal-success-message" style="display: none; text-align: center; padding: 20px 0;">
+          <div style="width:70px; height:70px; background:rgba(22, 163, 74, 0.1); color:var(--color-success); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin: 0 auto 24px auto;">
+            <i class="fas fa-check"></i>
+          </div>
+          <h3>Thank You for Your Generosity!</h3>
+          <p style="margin: 12px 0 24px 0; color:var(--color-gray-600);">Your donation of <span id="success-donation-amount" style="font-weight:700; color:var(--color-dark);">₹2,500</span> has been processed successfully. An 80G tax certificate and receipt will be emailed to you shortly.</p>
+          <button type="button" id="modal-close-success" class="btn btn-primary">Back to Website</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Files -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

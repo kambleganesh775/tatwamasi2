@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/images/logo.jpeg" type="image/jpeg">
+  
+  <!-- SEO Meta Tags -->
+  <title>Tatwamasi Foundation | Home To The World</title>
+  <meta name="description" content="Empowering rural India through quality education, healthcare, sports, arts & culture, and environmental initiatives. Co-founded in rural India.">
+  <meta name="keywords" content="Tatwamasi Foundation, Arijit Singh, , NGO India, Rural Education, Sports Academy, Aditi SurSadhanalaya, Aditi Institute of Excellence">
+  
+  <!-- OpenGraph Card -->
+  <meta property="og:title" content="Tatwamasi Foundation | Home To The World">
+  <meta property="og:description" content="Empowering the youth and communities of rural India through holistic growth.">
+  <meta property="og:image" content="./assets/images/logo.jpeg">
+  <meta property="og:type" content="website">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Global & Main Style sheets -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <!-- Local CSS Enhancements for Homepage -->
+  <style>
+    /* Hero Section Style */
+    .hero {
+      height: 110vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background-color: var(--color-dark);
+      color: var(--color-white);
+    }
+    
+    .hero-visual {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0.65;
+    }
+    
+    .hero-slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+    }
+    
+    .hero-slide.active {
+      opacity: 1;
+    }
+    
+    .hero-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      transition: transform 1.5s ease-in-out;
+    }
+    
+    .hero-slide.active img {
+      transform: scale(1);
+    }
+    
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, rgba(17, 24, 39, 0.85) 0%, rgba(17, 24, 39, 0.4) 60%, rgba(17, 24, 39, 0.1) 100%);
+      z-index: 2;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 780px;
+    }
+    
+    .hero h1 {
+      color: var(--color-white);
+      margin-bottom: 24px;
+      font-weight: 800;
+    }
+    
+    .hero p {
+      color: var(--color-gray-300);
+      margin-bottom: 40px;
+    }
+    
+    /* Mission Split Style */
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .mission-text {
+      font-size: 20px;
+      line-height: 1.7;
+    }
+    
+    .mission-quote {
+      border-left: 4px solid var(--color-primary);
+      padding-left: 28px;
+      font-style: italic;
+      font-size: 22px;
+      margin: 32px 0;
+      color: var(--color-dark);
+      font-family: var(--font-heading);
+    }
+    
+    /* Impact Counters Style */
+    .counters-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 30px;
+      text-align: center;
+    }
+    
+    .counter-card h3 {
+      font-size: clamp(38px, 4vw, 56px);
+      font-weight: 800;
+      color: var(--color-white);
+      margin-bottom: 10px;
+    }
+    
+    .counter-card p {
+      font-size: 15px;
+      color: var(--color-gray-400);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0;
+    }
+    
+    /* Horizontal Story Timeline Scroll Style */
+    .timeline-section {
+      background-color: var(--color-gray-50);
+      overflow: hidden;
+      width: 100%;
+      padding: 0;
+    }
+    
+    .timeline-wrapper {
+      display: flex;
+      align-items: center;
+      height: 80vh;
+      min-height: 520px;
+      padding-left: 10%;
+    }
+    
+    .timeline-intro {
+      flex: 0 0 min(400px, 80vw);
+      margin-right: min(80px, 8vw);
+    }
+    
+    .timeline-horizontal-scroll {
+      display: flex;
+      gap: min(40px, 6vw);
+      will-change: transform;
+    }
+    
+    .timeline-card {
+      flex: 0 0 min(380px, 80vw);
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: clamp(24px, 4vw, 40px);
+      box-shadow: var(--shadow-premium);
+      border: 1px solid var(--color-gray-100);
+      position: relative;
+    }
+    
+    .timeline-year {
+      font-size: clamp(40px, 8vw, 64px);
+      font-weight: 800;
+      font-family: var(--font-heading);
+      color: var(--color-primary);
+      line-height: 1;
+      margin-bottom: 20px;
+      transition: var(--transition-fast);
+    }
+
+    
+    .timeline-card h4 {
+      font-size: clamp(18px, 3.5vw, 20px);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+    
+    .timeline-card p {
+      font-size: clamp(14px, 3vw, 15px);
+      color: var(--color-gray-600);
+      margin-bottom: 0;
+    }
+    
+    /* Join Split Grid Style */
+    .join-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    @media (max-width: 1024px) {
+      .mission-grid, .join-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .counters-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .counters-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .counters-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Tighten section padding to reduce vertical space across all homepage sections */
+    .section {
+      padding: clamp(40px, 5vw, 60px) 0 !important;
+    }
+    
+    @media (max-width: 991px) {
+      .timeline-wrapper {
+        height: 60vh;
+        min-height: 420px;
+        padding-left: 6%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="./index.html" class="logo" aria-label="Tatwamasi Foundation Home">
+        <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+        <span>Tatwamasi Foundation</span>
+      </a>
+      
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="./index.html" class="nav-link active">Home</a>
+        <a href="./about.html" class="nav-link">About Us</a>
+        <div class="nav-dropdown">
+          <a href="./initiatives.html" class="nav-link dropdown-toggle">Our Initiatives <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="./education.html">Education</a>
+            <a href="./healthcare.html">Healthcare</a>
+            <a href="./sports.html">Sports Academy</a>
+            <a href="./music.html">Music & Arts</a>
+            <a href="./initiatives.html#environment">Environment</a>
+          </div>
+        </div>
+        <a href="./join.html" class="nav-link">Join Mission</a>
+        <a href="./contact.html" class="nav-link">Contact</a>
+        <button class="btn btn-primary" data-open-modal style="padding: 10px 24px; font-size:15px; margin-left: 10px;">Support Us</button>
+      </nav>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. Hero Section -->
+    <section class="hero" aria-label="Hero Banner">
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-slider">
+          <div class="hero-slide active">
+            <img src="./assets/images/hero-education.jpg" alt="Quality Education at Aditi Institute">
+          </div>
+          <div class="hero-slide">
+            <img src="./assets/images/hero-sports.jpg" alt="Sports Academy Training in ">
+          </div>
+          <div class="hero-slide">
+            <img src="./assets/images/hero-music.jpg" alt="Performing Arts at Aditi SurSadhanalaya">
+          </div>
+          <div class="hero-slide">
+            <img src="./assets/images/hero-cultural.jpg" alt="Cultural and Community Drives">
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="hero-content reveal">
+          <span class="tagline" style="color: var(--color-secondary);">#HOMETOTHEWORLD</span>
+          <h1>Empowering the Heart of India</h1>
+          <p class="lead">Empowering the youth, children and communities to realise their true potential - through education, healthcare, sports, arts and environmental transformation.</p>
+          <div class="btn-group">
+            <a href="./initiatives.html" class="btn btn-primary">Explore Our Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Mission Section -->
+    <section class="section" aria-label="Our Mission">
+      <div class="container">
+        <div class="mission-grid">
+          <div class="reveal-left">
+            <span class="tagline">The Mission</span>
+            <h2>Rooted in India,<br>Reaching Every Soul</h2>
+            <div class="mission-text">
+              <p>Tatwamasi Foundation works at the intersection of rural India's most urgent needs - education, healthcare, sports, environment and music. We reach the children and communities who have been left furthest behind, and walk alongside them as they discover what they are truly capable of.</p>
+              <div class="mission-quote">
+                "We believe that true empowerment is not given - it is awakened. Every village holds wisdom. Every child carries potential. Our work is simply to create the conditions where both can flourish."
+              </div>
+              <p>Our programmes are built for scale, but delivered with care. We partner with local leaders, respect the community traditions, and measure success not in numbers, but in lives transformed and futures rewritten.</p>
+            </div>
+          </div>
+          <div class="reveal-right">
+            <div class="image-wrapper" style="aspect-ratio: 4/5;">
+              <img src="./assets/images/edu-school.jpg" alt="Children smiling and playing at Aditi Vidya Niketan school grounds">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Impact Numbers Section -->
+    <section class="section section-dark impact-section" aria-label="Impact Summary">
+      <div class="container">
+        <div class="counters-grid">
+          <div class="counter-card">
+            <h3><span class="counter-num" data-target="1500">0</span>+</h3>
+            <p>Children Educated</p>
+          </div>
+          <div class="counter-card">
+            <h3><span class="counter-num" data-target="500">0</span>+</h3>
+            <p>Patients Supported</p>
+          </div>
+          <div class="counter-card">
+            <h3><span class="counter-num" data-target="300">0</span>+</h3>
+            <p>Athletes Trained</p>
+          </div>
+          <div class="counter-card">
+            <h3><span class="counter-num" data-target="150">0</span>+</h3>
+            <p>Artists Developed</p>
+          </div>
+          <div class="counter-card">
+            <h3><span class="counter-num" data-target="25">0</span>+</h3>
+            <p>Villages Reached</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Our Story Timeline Section (Horizontal Pin Scroll) -->
+    <section class="timeline-section" aria-label="Our Journey Timeline">
+      <div class="timeline-wrapper">
+        <div class="timeline-intro">
+          <span class="tagline">Our Story</span>
+          <h2>A Legacy of Awakening Potential</h2>
+          <p>Founded in 2022 by visionaries including Arijit Singh in rural India, we work daily to build infrastructure that guarantees a future of quality and dignity.</p>
+          <div style="display:flex; align-items:center; gap:12px; color:var(--color-primary); font-weight:700; font-family:var(--font-heading); margin-top: 24px;">
+            <span>Scroll horizontally</span> <i class="fas fa-arrow-right" style="animation: bounceHorizontal 1.5s infinite;"></i>
+          </div>
+        </div>
+        <div class="timeline-horizontal-scroll">
+          <div class="timeline-card">
+            <div class="timeline-year">2022</div>
+            <h4>Foundation Established</h4>
+            <p>Tatwamasi Foundation is launched with a clear, bold vision to serve communities and unleash youth potential in rural India.</p>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-year">2023</div>
+            <h4>Three flagship Institutes Launched</h4>
+            <p>Aditi Institute of Excellence (Education), Aditi Institute of Sports, and Aditi SurSadhanalaya (Music & Arts) go live, welcoming their first learners.</p>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-year">2024-26</div>
+            <h4>Community Growth & Drives</h4>
+            <p>Expansion of athletic coaching, arts training, environment beekeeping support, and medical drives, providing healthcare relief to 100+ families annually.</p>
+          </div>
+          <div class="timeline-card">
+            <div class="timeline-year">2027</div>
+            <h4>School & Hospital Opening</h4>
+            <p>The upcoming CBSE model school Aditi Vidyaniketan and our integrated regional healthcare and emergency facility open their doors to the region.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Our Five Pillars Section -->
+    <section class="section" style="padding-top: 0;" aria-label="Our Five Pillars of Change">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="tagline">Our Pillars</span>
+          <h2>Five Pillars of Change</h2>
+          <p class="lead">Each pillar targets a critical dimension of wellbeing - working together to build communities that are educated, healthy, resilient, and vibrant.</p>
+        </div>
+        <div class="card-grid reveal">
+          <!-- Card 1 -->
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-book-open"></i></div>
+            <h3>Education</h3>
+            <p>Quality learning for every child, from foundational literacy to advanced digital capabilities, so that no mind is left behind.</p>
+            <a href="./education.html" class="pillar-link">Learn More <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <!-- Card 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-heartbeat"></i></div>
+            <h3>Healthcare</h3>
+            <p>Preventive care, maternal health support, and regional medical programs designed to shield families and build resilience.</p>
+            <a href="./healthcare.html" class="pillar-link">Learn More <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <!-- Card 3 -->
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-running"></i></div>
+            <h3>Sports</h3>
+            <p>Harnessing the power of sports to build character, grit, and structural pathways to national opportunities.</p>
+            <a href="./sports.html" class="pillar-link">Learn More <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <!-- Card 4 -->
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-music"></i></div>
+            <h3>Music & Arts</h3>
+            <p>Preserving regional traditions and training creative vocalists, dancers, instrumentalists, and actors at Aditi SurSadhanalaya.</p>
+            <a href="./music.html" class="pillar-link">Learn More <i class="fas fa-chevron-right"></i></a>
+          </div>
+          <!-- Card 5 -->
+          <div class="pillar-card">
+            <div class="pillar-icon"><i class="fas fa-leaf"></i></div>
+            <h3>Environment</h3>
+            <p>Stewardship through conservation, local tree-planting, sustainable agro-farming, and rural eco-initiatives.</p>
+            <a href="./initiatives.html" class="pillar-link">Learn More <i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Featured Stories Section -->
+    <section class="section" style="background-color: var(--color-gray-50);" aria-label="Featured Stories">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="tagline">Human Stories</span>
+          <h2>Lives Transformed</h2>
+          <p class="lead">Real impact is measured not in metrics, but in individual lives empowered to dream, create, and succeed.</p>
+        </div>
+        <div class="stories-grid reveal">
+          <div class="story-card">
+            <img src="./assets/images/music-performance.jpg" alt="Young local girl singing with confidence at Aditi SurSadhanalaya" class="story-bg">
+            <div class="story-content">
+              <h3>The Sound of Dreams</h3>
+              <p>How Aditi SurSadhanalay enabled a local weaver's daughter to master classical vocals and find her unique creative voice.</p>
+              <a href="./music.html" class="btn btn-white" style="padding: 10px 20px; font-size:14px;">Read Story</a>
+            </div>
+          </div>
+          <div class="story-card">
+            <img src="./assets/images/sports-football.jpg" alt="Young soccer players playing on a lush green turf" class="story-bg">
+            <div class="story-content">
+              <h3>Rewriting Boundaries</h3>
+              <p>Discover how Joy, a youth athlete from , polished his agility on our 90m football field and was selected for state trials.</p>
+              <a href="./sports.html" class="btn btn-white" style="padding: 10px 20px; font-size:14px;">Read Story</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Impact Gallery Section (Masonry) -->
+    <section class="section" aria-label="Visual Impact Gallery">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="tagline">Moments</span>
+          <h2>Our Work in Action</h2>
+          <p class="lead">A glance at daily operations across our learning labs, health camps, and sports arenas.</p>
+        </div>
+        <div class="gallery-grid reveal">
+          <div class="gallery-item tall">
+            <img src="./assets/images/edu-study.jpg" alt="Student coding and doing math exercises in a digital classroom">
+            <div class="gallery-overlay">
+              <h4>Leadership Labs</h4>
+              <p>Aditi Institute of Excellence after-school coding programs.</p>
+            </div>
+          </div>
+          <div class="gallery-item wide">
+            <img src="./assets/images/sports-cricket.jpg" alt="Young boy practicing cricket batting with trainer">
+            <div class="gallery-overlay">
+              <h4>Cricket Academy</h4>
+              <p>Coaching the Under-15 squad on game strategy.</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/music-dance.png" alt="Students practicing classical dance postures">
+            <div class="gallery-overlay">
+              <h4>Embodied Heritage</h4>
+              <p>Classical and contemporary choreography sessions.</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/music-theatre.png" alt="Drama class students acting out a story on stage">
+            <div class="gallery-overlay">
+              <h4>Theatre of Stories</h4>
+              <p>Developing confidence and empathy through dramatic arts.</p>
+            </div>
+          </div>
+          <div class="gallery-item">
+            <img src="./assets/images/sports-yoga.jpg" alt="Athletes practicing yoga poses for physical fitness">
+            <div class="gallery-overlay">
+              <h4>Yoga & Balance</h4>
+              <p>Combining traditional posture blocks with athletic recovery.</p>
+            </div>
+          </div>
+          <div class="gallery-item wide">
+            <img src="./assets/images/edu-bee.jpg" alt="Beekeeping frames used in sustainable agriculture program">
+            <div class="gallery-overlay">
+              <h4>Sustainable Ecology</h4>
+              <p>Empowering local farming structures with agro-education.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Join Movement Section -->
+    <section class="section section-dark" aria-label="Join the Movement">
+      <div class="container">
+        <div class="join-grid">
+          <div class="reveal-left">
+            <span class="tagline" style="color: var(--color-secondary);">Stay Connected</span>
+            <h2>Join the Mission</h2>
+            <p class="lead" style="margin-bottom: 32px;">Be the first to hear about our progress, new initiatives, and opportunities to volunteer your skills in the field. Together, we are the modern soul of India.</p>
+            
+            <div class="image-wrapper" style="aspect-ratio: 16/9; border-radius: var(--radius-md); overflow: hidden; box-shadow: var(--shadow-premium); margin-bottom: 32px;">
+              <img src="./assets/images/join-volunteer.jpg" alt="Volunteers working with rural communities" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-smooth);">
+            </div>
+
+            <div style="display:flex; align-items:center; gap:16px;">
+              <div style="width:48px; height:48px; background:rgba(255,255,255,0.05); border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--color-secondary);"><i class="fas fa-building"></i></div>
+              <div>
+                <h4 style="font-size:16px; margin-bottom:2px;">Headquarters</h4>
+                <p style="font-size:14px; margin-bottom:0; color:var(--color-gray-400); line-height: 1.4;">1002 A-Wing Evershine Embassy, CHSL Veera, Desai Rd, Opp. Country Club, Andheri West, Mumbai - 400053</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="reveal-right">
+            <div class="form-card">
+              <h3 style="margin-bottom: 24px; font-weight:700; color:var(--color-dark);">Subscribe for Updates</h3>
+              <form id="subscribe-form" onsubmit="event.preventDefault(); alert('Thank you for connecting with us! We will stay in touch.'); this.reset();">
+                <div class="form-group">
+                  <label for="sub-name">Name*</label>
+                  <input type="text" id="sub-name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                  <label for="sub-phone">Phone Number*</label>
+                  <input type="tel" id="sub-phone" class="form-control" value="+91 " placeholder="+91 " required>
+                </div>
+                <div class="form-group">
+                  <label for="sub-email">Email Address</label>
+                  <input type="email" id="sub-email" class="form-control" placeholder="you@domain.com">
+                </div>
+                <div class="form-group">
+                  <label for="sub-msg">Message (Optional)</label>
+                  <textarea id="sub-msg" class="form-control" placeholder="Share how you'd like to get involved..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Connect With Us</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Testimonials Section -->
+    <section class="section" aria-label="Quotes and Testimonials">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="tagline">Voices</span>
+          <h2>Belief in Transformation</h2>
+        </div>
+        <div class="testimonial-carousel reveal">
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <blockquote class="testimonial-quote">
+              "At Tatwamasi Foundation, we are not here to rescue. We are here to awaken. The resilience and potential are already present in rural communities; our only duty is to design spaces where they can thrive."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-img">AS</div>
+              <div class="author-info">
+                <h4>Arijit Singh</h4>
+                <p>Visionary & Founder</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-card">
+            <i class="fas fa-quote-left quote-icon"></i>
+            <blockquote class="testimonial-quote">
+              "Seeing my son return from the football training camp with structured discipline and a healthy sense of teamwork has changed the entire dynamic of our home. He sees a path forward."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="author-img">MB</div>
+              <div class="author-info">
+                <h4>Mousumi Biswas</h4>
+                <p>Parent,  village</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 10. Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo" style="color:var(--color-white)">
+            <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+            <span>Tatwamasi Foundation</span>
+          </a>
+          <p>Rooted in India, reaching every soul. A multi-pillar foundation empowering rural communities since 2022.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="./about.html">Our Story</a></li>
+            <li><a href="./initiatives.html">Our Initiatives</a></li>
+            <li><a href="./join.html">Get Involved</a></li>
+            <li><a href="./contact.html">Reach Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Our Initiatives</h4>
+          <ul>
+            <li><a href="./education.html">Education</a></li>
+            <li><a href="./healthcare.html">Healthcare</a></li>
+            <li><a href="./sports.html">Sports Academy</a></li>
+            <li><a href="./music.html">SurSadhanalay</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Headquarters</h4>
+          <p style="color:var(--color-gray-400); font-size:15px; line-height:1.5;">
+            1002 A-Wing Evershine Embassy, CHSL Veera, Desai Rd, Opp. Country Club, Andheri West, Mumbai - 400053
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tatwamasi Foundation. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Donation Checkout Modal -->
+  <div id="donation-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Support Tatwamasi Foundation</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="modal-donation-form">
+          <p class="lead" style="font-size:15px; margin-bottom:20px;">Your support directly funds schools, healthcare drives, and athletic training in rural India.</p>
+          
+          <div class="form-group">
+            <label>Select Donation Amount (INR)</label>
+            <div class="donation-grid">
+              <button type="button" class="btn-amt" data-amount="1000">₹1,000</button>
+              <button type="button" class="btn-amt active" data-amount="2500">₹2,500</button>
+              <button type="button" class="btn-amt" data-amount="5000">₹5,000</button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="custom-amount">Or enter custom amount (₹)</label>
+            <input type="number" id="custom-amount" class="form-control" value="2500" min="100" placeholder="Custom Amount">
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-name">Your Full Name*</label>
+            <input type="text" id="donor-name" class="form-control" placeholder="Arijit Sen" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-email">Your Email Address*</label>
+            <input type="email" id="donor-email" class="form-control" placeholder="sen@example.com" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top:10px;">Proceed to Secure Checkout</button>
+        </form>
+        
+        <div id="modal-success-message" style="display: none; text-align: center; padding: 20px 0;">
+          <div style="width:70px; height:70px; background:rgba(22, 163, 74, 0.1); color:var(--color-success); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin: 0 auto 24px auto;">
+            <i class="fas fa-check"></i>
+          </div>
+          <h3>Thank You for Your Generosity!</h3>
+          <p style="margin: 12px 0 24px 0; color:var(--color-gray-600);">Your donation of <span id="success-donation-amount" style="font-weight:700; color:var(--color-dark);">₹2,500</span> has been processed successfully. An 80G tax certificate and receipt will be emailed to you shortly.</p>
+          <button type="button" id="modal-close-success" class="btn btn-primary">Back to Website</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Smooth Scroll (Lenis) & GSAP CDN Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  
+  <!-- Core Script File -->
+  <script src="./assets/js/main.js"></script>
+
+  <!-- Keyframe CSS Animations -->
+  <style>
+    @keyframes bounceHorizontal {
+      0%, 100% { transform: translateX(0); }
+      50% { transform: translateX(6px); }
+    }
+  </style>
+</body>
+</html>

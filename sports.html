@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/logo.jpeg" type="image/jpeg">
+<title>Sports Academy | Tatwamasi Foundation</title>
+  <meta name="description" content="Explore cricket, football, and yoga training at the Aditi Institute of Sports in rural India.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Global & Main Style sheets -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <style>
+    .pillar-hero {
+      padding: 160px 0 80px 0;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.04) 0%, rgba(21, 94, 239, 0.02) 100%);
+    }
+    
+    .stats-strip {
+      background: var(--color-white);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-gray-100);
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      margin-top: 40px;
+    }
+    
+    .strip-item h4 {
+      font-size: 28px;
+      color: var(--color-primary);
+      margin-bottom: 5px;
+    }
+    
+    .strip-item p {
+      font-size: 14px;
+      color: var(--color-gray-500);
+      margin-bottom: 0;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .detail-section {
+      padding: 100px 0;
+    }
+    
+    .detail-section:nth-child(even) {
+      background-color: var(--color-gray-50);
+    }
+    
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .detail-grid.reverse {
+      direction: rtl;
+    }
+    
+    .detail-grid.reverse .detail-content {
+      direction: ltr;
+    }
+    
+    @media (max-width: 1024px) {
+      .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .stats-strip {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="./index.html" class="logo" aria-label="Tatwamasi Foundation Home">
+        <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+        <span>Tatwamasi Foundation</span>
+      </a>
+      
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./about.html" class="nav-link">About Us</a>
+        <div class="nav-dropdown">
+          <a href="./initiatives.html" class="nav-link dropdown-toggle active">Our Initiatives <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="./education.html">Education</a>
+            <a href="./healthcare.html">Healthcare</a>
+            <a href="./sports.html">Sports Academy</a>
+            <a href="./music.html">Music & Arts</a>
+            <a href="./initiatives.html#environment">Environment</a>
+          </div>
+        </div>
+        <a href="./join.html" class="nav-link">Join Mission</a>
+        <a href="./contact.html" class="nav-link">Contact</a>
+        <button class="btn btn-primary" data-open-modal style="padding: 10px 24px; font-size:15px; margin-left: 10px;">Support Us</button>
+      </nav>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Sports Pillar Hero -->
+    <section class="pillar-hero">
+      <div class="container">
+        <div class="reveal">
+          <span class="tagline">Pillars of Change</span>
+          <h1 style="margin-bottom: 24px;">Sports: Discipline, Teamwork, Excellence</h1>
+          <p class="lead" style="max-width: 800px; margin-bottom: 0;">Through Aditi Institute of Sports, an initiative by Tatwamasi Foundation, we develop young athletes into confident performers and committed team players. We nurture physical skill alongside character, grit, and leadership.</p>
+        </div>
+        
+        <div class="stats-strip reveal">
+          <div class="strip-item">
+            <h4>300+</h4>
+            <p>Active Athletes</p>
+          </div>
+          <div class="strip-item">
+            <h4>90m</h4>
+            <p>Football Turf Field</p>
+          </div>
+          <div class="strip-item">
+            <h4>3</h4>
+            <p>Age Brackets (U13 | U15 | U18)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program 1: Cricket -->
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-grid reveal">
+          <div class="detail-content">
+            <span class="tagline">Aditi Institute of Sports | Cricket</span>
+            <h2>Cricket Training Academy</h2>
+            <p>Cricket is more than a sport in India; it's a channel for community, passion, and opportunity. Our cricket program focuses on perfecting the core mechanics: batting footwork, bowling spin/speed, and game strategy from an early age.</p>
+            <p>With structured U-13, U-15, and U-18 coaching paths, athletes prepare for competitive district, state, and club tournaments, opening pathways to professional sports careers.</p>
+
+          </div>
+          <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+            <img src="./assets/images/sports-cricket.jpg" alt="A young athlete practicing cricket nets batting drill">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program 2: Football -->
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-grid reverse reveal">
+          <div class="detail-content">
+            <span class="tagline">Aditi Institute of Sports | Football</span>
+            <h2>Football Coaching Program</h2>
+            <p>Agility, rapid strategic positioning, and physical endurance guide our football program. Under the supervision of certified coaches, young boys and girls learn modern tactical football concepts, pressing formations, and quick transitions on our professional 90m pitch in rural India.</p>
+            <p>We believe in building confident team players who carry the grit and responsibility of ensemble play on and off the field.</p>
+
+          </div>
+          <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+            <img src="./assets/images/sports-football.jpg" alt="Young youth football players running drills on green turf">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program 3: Yoga -->
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-grid reveal">
+          <div class="detail-content">
+            <span class="tagline">Aditi Institute of Sports | Wellness</span>
+            <h2>Yoga & Physical Fitness</h2>
+            <p>A balanced athlete requires flexibility, structural recovery, and mental concentration. We blend traditional Hatha and Vinyasa yoga breathing blocks with modern plyometric conditioning classes.</p>
+            <p>This program is open to both our academy athletes (for post-match muscle recovery and injury prevention) and the general community (to encourage balanced physical and mental health).</p>
+
+          </div>
+          <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+            <img src="./assets/images/sports-yoga.jpg" alt="Group of people practicing physical yoga poses in unison outdoors">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo" style="color:var(--color-white)">
+            <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+            <span>Tatwamasi Foundation</span>
+          </a>
+          <p>Rooted in India, reaching every soul. A multi-pillar foundation empowering rural communities since 2022.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="./about.html">Our Story</a></li>
+            <li><a href="./initiatives.html">Our Initiatives</a></li>
+            <li><a href="./join.html">Get Involved</a></li>
+            <li><a href="./contact.html">Reach Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Our Initiatives</h4>
+          <ul>
+            <li><a href="./education.html">Education</a></li>
+            <li><a href="./healthcare.html">Healthcare</a></li>
+            <li><a href="./sports.html">Sports Academy</a></li>
+            <li><a href="./music.html">SurSadhanalay</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Headquarters</h4>
+          <p style="color:var(--color-gray-400); font-size:15px; line-height:1.5;">
+            1002 A-Wing Evershine Embassy, CHSL Veera, Desai Rd, Opp. Country Club, Andheri West, Mumbai - 400053
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tatwamasi Foundation. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Donation Checkout Modal -->
+  <div id="donation-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Support Tatwamasi Foundation</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="modal-donation-form">
+          <p class="lead" style="font-size:15px; margin-bottom:20px;">Your support directly funds schools, healthcare drives, and athletic training in rural India.</p>
+          
+          <div class="form-group">
+            <label>Select Donation Amount (INR)</label>
+            <div class="donation-grid">
+              <button type="button" class="btn-amt" data-amount="1000">₹1,000</button>
+              <button type="button" class="btn-amt active" data-amount="2500">₹2,500</button>
+              <button type="button" class="btn-amt" data-amount="5000">₹5,000</button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="custom-amount">Or enter custom amount (₹)</label>
+            <input type="number" id="custom-amount" class="form-control" value="2500" min="100" placeholder="Custom Amount">
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-name">Your Full Name*</label>
+            <input type="text" id="donor-name" class="form-control" placeholder="Arijit Sen" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-email">Your Email Address*</label>
+            <input type="email" id="donor-email" class="form-control" placeholder="sen@example.com" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top:10px;">Proceed to Secure Checkout</button>
+        </form>
+        
+        <div id="modal-success-message" style="display: none; text-align: center; padding: 20px 0;">
+          <div style="width:70px; height:70px; background:rgba(22, 163, 74, 0.1); color:var(--color-success); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin: 0 auto 24px auto;">
+            <i class="fas fa-check"></i>
+          </div>
+          <h3>Thank You for Your Generosity!</h3>
+          <p style="margin: 12px 0 24px 0; color:var(--color-gray-600);">Your donation of <span id="success-donation-amount" style="font-weight:700; color:var(--color-dark);">₹2,500</span> has been processed successfully. An 80G tax certificate and receipt will be emailed to you shortly.</p>
+          <button type="button" id="modal-close-success" class="btn btn-primary">Back to Website</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Files -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

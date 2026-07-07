@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/logo.jpeg" type="image/jpeg">
+<title>Our Initiatives | Tatwamasi Foundation</title>
+  <meta name="description" content="Explore our five core pillars of change in rural India: Education, Healthcare, Sports, Music & Arts, and Environmental Stewardship.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Global & Main Style sheets -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <style>
+    .init-hero {
+      padding: 160px 0 80px 0;
+      background-color: var(--color-gray-50);
+      text-align: center;
+    }
+    
+    .init-hero h1 {
+      max-width: 800px;
+      margin: 0 auto 24px auto;
+    }
+    
+    .init-list {
+      display: flex;
+      flex-direction: column;
+      gap: 120px;
+      margin-top: 80px;
+    }
+    
+    .init-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .init-item:nth-child(even) {
+      direction: rtl;
+    }
+    
+    .init-item:nth-child(even) .init-content {
+      direction: ltr;
+    }
+    
+    .init-content h3 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    
+    .init-content h3 i {
+      color: var(--color-primary);
+    }
+    
+    .init-content p {
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 28px;
+    }
+    
+    .init-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+    
+    .init-highlight-tag {
+      background: var(--color-gray-100);
+      padding: 8px 16px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-gray-800);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    .init-highlight-tag i {
+      color: var(--color-secondary);
+    }
+    
+    @media (max-width: 1024px) {
+      .init-item {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        direction: ltr !important;
+      }
+      .init-item:nth-child(even) .init-content {
+        direction: ltr;
+      }
+      .init-highlights {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="./index.html" class="logo" aria-label="Tatwamasi Foundation Home">
+        <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+        <span>Tatwamasi Foundation</span>
+      </a>
+      
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./about.html" class="nav-link">About Us</a>
+        <div class="nav-dropdown">
+          <a href="./initiatives.html" class="nav-link dropdown-toggle active">Our Initiatives <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="./education.html">Education</a>
+            <a href="./healthcare.html">Healthcare</a>
+            <a href="./sports.html">Sports Academy</a>
+            <a href="./music.html">Music & Arts</a>
+            <a href="./initiatives.html#environment">Environment</a>
+          </div>
+        </div>
+        <a href="./join.html" class="nav-link">Join Mission</a>
+        <a href="./contact.html" class="nav-link">Contact</a>
+        <button class="btn btn-primary" data-open-modal style="padding: 10px 24px; font-size:15px; margin-left: 10px;">Support Us</button>
+      </nav>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Initiatives Landing Hero -->
+    <section class="init-hero">
+      <div class="container">
+        <div class="reveal">
+          <span class="tagline">Our Pillars</span>
+          <h1 style="margin-bottom: 24px;">Comprehensive Programs Addressing India's Needs</h1>
+          <p class="lead" style="max-width: 760px; margin: 0 auto;">Our work spans five interconnected dimensions of human development. Each initiative is carefully designed, rigorously evaluated, and deeply rooted in community partnership.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Initiatives Section -->
+    <section class="section" style="padding-top: 0;">
+      <div class="container">
+        <div class="init-list">
+          
+          <!-- Pillar 1: Education -->
+          <div class="init-item reveal">
+            <div class="init-content">
+              <h3><i class="fas fa-book-open"></i> Education</h3>
+              <p>Education is the foundation upon which all possibility rests. Tatwamasi Foundation operates flagship educational systems to ensure that poverty never locks down potential.</p>
+              <div class="init-highlights">
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Aditi Vidya Niketan School</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Aditi Institute of Excellence</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Quality English & Spoken focus</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Digital-Integrated Labs</div>
+              </div>
+              <a href="./education.html" class="btn btn-primary">Explore Education Initiative</a>
+            </div>
+            <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+              <img src="./assets/images/edu-school.jpg" alt="Students sitting and writing in a bright classroom">
+            </div>
+          </div>
+          
+          <!-- Pillar 2: Healthcare -->
+          <div class="init-item reveal">
+            <div class="init-content">
+              <h3><i class="fas fa-user-md"></i> Healthcare</h3>
+              <p>No child should suffer from treatable illness. No family should lack basic medical support. We deliver screening camps and financial medical funding for local  villages.</p>
+              <div class="init-highlights">
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Regular Rural Medical Camps</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Patient Support Fund</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Upcoming Regional Hospital</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Emergency Health Access</div>
+              </div>
+              <a href="./healthcare.html" class="btn btn-primary">Explore Healthcare Initiative</a>
+            </div>
+            <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+              <img src="./assets/images/health-camp.jpg" alt="Local doctor examining a village resident at a medical drive">
+            </div>
+          </div>
+          
+          <!-- Pillar 3: Sports -->
+          <div class="init-item reveal">
+            <div class="init-content">
+              <h3><i class="fas fa-running"></i> Sports Academy</h3>
+              <p>Nurturing young athletic talent through structured training, professional coaching, and physical conditioning, building discipline and leadership for lifepaths.</p>
+              <div class="init-highlights">
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Cricket Training (U13, U15, U18)</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Football Coaching Squads</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Yoga & Balance classes</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> 90m Professional Turf Field</div>
+              </div>
+              <a href="./sports.html" class="btn btn-primary">Explore Sports Academy</a>
+            </div>
+            <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+              <img src="./assets/images/sports-cricket.jpg" alt="Cricket nets training in rural India">
+            </div>
+          </div>
+          
+          <!-- Pillar 4: Music & Arts -->
+          <div class="init-item reveal">
+            <div class="init-content">
+              <h3><i class="fas fa-music"></i> Music & Arts (SurSadhanalay)</h3>
+              <p>Fostering creative expressions, preserving classical folk rhythms, and providing platforms for vocalists, dancers, instrumentalists, and theatre artists.</p>
+              <div class="init-highlights">
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Vocal Classes (Classical & Fusion)</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Indian Instruments (Tabla, Sitar)</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Western Instruments (Drums, Piano)</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Performing Arts & Theatre</div>
+              </div>
+              <a href="./music.html" class="btn btn-primary">Explore SurSadhanalay</a>
+            </div>
+            <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+              <img src="./assets/images/music-class.jpg" alt="Vocal class rehearsal at Aditi SurSadhanalaya">
+            </div>
+          </div>
+          
+          <!-- Pillar 5: Environment & Other Initiatives -->
+          <div class="init-item reveal" id="environment">
+            <div class="init-content">
+              <h3><i class="fas fa-leaf"></i> Environment & Community Care</h3>
+              <p>Stewardship for tomorrow. We protect the land that sustains rural livelihoods by training local farmers, planting native trees, and implementing water conservation, alongside immediate relief drives.</p>
+              <div class="init-highlights">
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Native Tree Reforestation</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Local Beekeeping Workshops</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Water Conservation Guides</div>
+                <div class="init-highlight-tag"><i class="fas fa-check-circle"></i> Clothes & Nutrition Drives</div>
+              </div>
+
+            </div>
+            <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+              <img src="./assets/images/edu-bee.jpg" alt="Farmer holding honeycomb frame from beekeeping workshop">
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo" style="color:var(--color-white)">
+            <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+            <span>Tatwamasi Foundation</span>
+          </a>
+          <p>Rooted in India, reaching every soul. A multi-pillar foundation empowering rural communities since 2022.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="./about.html">Our Story</a></li>
+            <li><a href="./initiatives.html">Our Initiatives</a></li>
+            <li><a href="./join.html">Get Involved</a></li>
+            <li><a href="./contact.html">Reach Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Our Initiatives</h4>
+          <ul>
+            <li><a href="./education.html">Education</a></li>
+            <li><a href="./healthcare.html">Healthcare</a></li>
+            <li><a href="./sports.html">Sports Academy</a></li>
+            <li><a href="./music.html">SurSadhanalay</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Headquarters</h4>
+          <p style="color:var(--color-gray-400); font-size:15px; line-height:1.5;">
+            1002 A-Wing Evershine Embassy, CHSL Veera, Desai Rd, Opp. Country Club, Andheri West, Mumbai - 400053
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tatwamasi Foundation. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Donation Checkout Modal -->
+  <div id="donation-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Support Tatwamasi Foundation</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="modal-donation-form">
+          <p class="lead" style="font-size:15px; margin-bottom:20px;">Your support directly funds schools, healthcare drives, and athletic training in rural India.</p>
+          
+          <div class="form-group">
+            <label>Select Donation Amount (INR)</label>
+            <div class="donation-grid">
+              <button type="button" class="btn-amt" data-amount="1000">₹1,000</button>
+              <button type="button" class="btn-amt active" data-amount="2500">₹2,500</button>
+              <button type="button" class="btn-amt" data-amount="5000">₹5,000</button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="custom-amount">Or enter custom amount (₹)</label>
+            <input type="number" id="custom-amount" class="form-control" value="2500" min="100" placeholder="Custom Amount">
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-name">Your Full Name*</label>
+            <input type="text" id="donor-name" class="form-control" placeholder="Arijit Sen" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-email">Your Email Address*</label>
+            <input type="email" id="donor-email" class="form-control" placeholder="sen@example.com" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top:10px;">Proceed to Secure Checkout</button>
+        </form>
+        
+        <div id="modal-success-message" style="display: none; text-align: center; padding: 20px 0;">
+          <div style="width:70px; height:70px; background:rgba(22, 163, 74, 0.1); color:var(--color-success); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin: 0 auto 24px auto;">
+            <i class="fas fa-check"></i>
+          </div>
+          <h3>Thank You for Your Generosity!</h3>
+          <p style="margin: 12px 0 24px 0; color:var(--color-gray-600);">Your donation of <span id="success-donation-amount" style="font-weight:700; color:var(--color-dark);">₹2,500</span> has been processed successfully. An 80G tax certificate and receipt will be emailed to you shortly.</p>
+          <button type="button" id="modal-close-success" class="btn btn-primary">Back to Website</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Files -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>

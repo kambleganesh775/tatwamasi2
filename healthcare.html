@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/images/logo.jpeg" type="image/jpeg">
+<title>Healthcare Initiative | Tatwamasi Foundation</title>
+  <meta name="description" content="Read about our regular medical camps, patient support programs, and the upcoming Tatwamasi Hospital in rural India.">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Global & Main Style sheets -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  
+  <style>
+    .pillar-hero {
+      padding: 160px 0 80px 0;
+      background: linear-gradient(135deg, rgba(0, 184, 169, 0.05) 0%, rgba(21, 94, 239, 0.02) 100%);
+    }
+    
+    .pillar-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      margin-top: 60px;
+      align-items: center;
+    }
+    
+    .detail-section {
+      padding: 100px 0;
+    }
+    
+    .detail-section:nth-child(even) {
+      background-color: var(--color-gray-50);
+    }
+    
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    
+    .detail-grid.reverse {
+      direction: rtl;
+    }
+    
+    .detail-grid.reverse .detail-content {
+      direction: ltr;
+    }
+    
+    .feature-points {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    
+    .feature-point {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    
+    .feature-point i {
+      color: var(--color-secondary);
+      font-size: 18px;
+    }
+    
+    @media (max-width: 1024px) {
+      .pillar-intro-grid, .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+      }
+      .feature-points {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="container header-container">
+      <a href="./index.html" class="logo" aria-label="Tatwamasi Foundation Home">
+        <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+        <span>Tatwamasi Foundation</span>
+      </a>
+      
+      <nav class="nav" aria-label="Main Navigation">
+        <a href="./index.html" class="nav-link">Home</a>
+        <a href="./about.html" class="nav-link">About Us</a>
+        <div class="nav-dropdown">
+          <a href="./initiatives.html" class="nav-link dropdown-toggle active">Our Initiatives <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i></a>
+          <div class="nav-dropdown-menu">
+            <a href="./education.html">Education</a>
+            <a href="./healthcare.html">Healthcare</a>
+            <a href="./sports.html">Sports Academy</a>
+            <a href="./music.html">Music & Arts</a>
+            <a href="./initiatives.html#environment">Environment</a>
+          </div>
+        </div>
+        <a href="./join.html" class="nav-link">Join Mission</a>
+        <a href="./contact.html" class="nav-link">Contact</a>
+        <button class="btn btn-primary" data-open-modal style="padding: 10px 24px; font-size:15px; margin-left: 10px;">Support Us</button>
+      </nav>
+      
+      <button class="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Healthcare Pillar Hero -->
+    <section class="pillar-hero">
+      <div class="container">
+        <div class="reveal">
+          <span class="tagline">Pillars of Change</span>
+          <h1 style="margin-bottom: 24px;">Healthcare: Protecting Bodies, Safeguarding Futures</h1>
+          <p class="lead" style="max-width: 800px; margin-bottom: 0;">No child should suffer from treatable illness. No family should lack basic medical support. We work with experienced medical professionals to deliver compassionate, culturally-sensitive care to underserved populations.</p>
+        </div>
+        
+        <div class="pillar-intro-grid reveal">
+          <div>
+            <h3 style="font-size:24px; margin-bottom:16px;">Healthy Communities, Resilient Futures</h3>
+            <p>Our healthcare framework coordinates immediate diagnostic drives while constructing structural facilities to establish affordable, local treatment options for rural India.</p>
+          </div>
+          <div class="feature-points">
+            <div class="feature-point"><i class="fas fa-check-circle"></i> Diagnostic & Preventive Drives</div>
+            <div class="feature-point"><i class="fas fa-check-circle"></i> Patient Surgical Funds</div>
+            <div class="feature-point"><i class="fas fa-check-circle"></i> Local Youth Medical Education</div>
+            <div class="feature-point"><i class="fas fa-check-circle"></i> Emergency Regional Response</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Medical Drives -->
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-grid reveal">
+          <div class="detail-content">
+            <span class="tagline">Active Operations | Community Outreach</span>
+            <h2>Rural Medical Camps & Support Funds</h2>
+            <p>For families living in remote sectors, even simple screenings are out of reach. Tatwamasi Foundation coordinates regular medical drives in  and neighbouring blocks, bringing expert general practitioners, dentists, and pediatricians directly to the community.</p>
+            <p>Beyond diagnostics, our <strong>Patient Support Fund</strong> steps in to cover clinical drugs, diagnostic tests, and operational costs for families who cannot afford healthcare expenses.</p>
+            <div style="background-color:var(--color-gray-50); padding:24px; border-radius:var(--radius-md); border-left:4px solid var(--color-primary); margin-bottom:28px;">
+              <h4 style="margin-bottom:8px; font-weight:700;">Direct Annual Relief</h4>
+              <p style="font-size:15px; margin-bottom:0; color:var(--color-gray-600)">We support an average of <strong>100+ patients per year</strong> with life-saving surgery funding, specialized medicine distributions, and maternal wellness kits.</p>
+            </div>
+
+          </div>
+          <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+            <img src="./assets/images/health-support.jpg" alt="A clean, modern healthcare clinical ward mockup representing future facilities">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Hospital Project -->
+    <section class="detail-section">
+      <div class="container">
+        <div class="detail-grid reverse reveal">
+          <div class="detail-content">
+            <span class="tagline">Opening 2027 | Regional Infrastructure</span>
+            <h2>Integrated Hospital & Medical Education Facility</h2>
+            <p>Tatwamasi Foundation proposes a state-of-the-art integrated healthcare facility in rural India. The goal is to provide quality, high-standard advanced diagnostics, intensive care units, and emergency beds directly inside the district, removing the burden of traveling hours for critical treatment.</p>
+            <p>Importantly, the hospital will include a <strong>Medical Education Wing</strong> to train local students in nursing, clinical tech, and emergency operations, creating quality local careers in healthcare.</p>
+            <div class="feature-points" style="margin-bottom:28px;">
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:36px; height:36px; background:rgba(0,184,169,0.1); color:var(--color-secondary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px;"><i class="fas fa-ambulance"></i></div>
+                <span style="font-size:15px; font-weight:600;">Emergency Care within 70km</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:12px;">
+                <div style="width:36px; height:36px; background:rgba(0,184,169,0.1); color:var(--color-secondary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:14px;"><i class="fas fa-graduation-cap"></i></div>
+                <span style="font-size:15px; font-weight:600;">Local Paramedical Training</span>
+              </div>
+            </div>
+
+          </div>
+          <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
+            <img src="./assets/images/health-camp.jpg" alt="Healthcare professionals consulting a mother and child in rural India">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="./index.html" class="logo" style="color:var(--color-white)">
+            <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
+            <span>Tatwamasi Foundation</span>
+          </a>
+          <p>Rooted in India, reaching every soul. A multi-pillar foundation empowering rural communities since 2022.</p>
+          <div class="footer-socials">
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="./about.html">Our Story</a></li>
+            <li><a href="./initiatives.html">Our Initiatives</a></li>
+            <li><a href="./join.html">Get Involved</a></li>
+            <li><a href="./contact.html">Reach Us</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Our Initiatives</h4>
+          <ul>
+            <li><a href="./education.html">Education</a></li>
+            <li><a href="./healthcare.html">Healthcare</a></li>
+            <li><a href="./sports.html">Sports Academy</a></li>
+            <li><a href="./music.html">SurSadhanalay</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Headquarters</h4>
+          <p style="color:var(--color-gray-400); font-size:15px; line-height:1.5;">
+            1002 A-Wing Evershine Embassy, CHSL Veera, Desai Rd, Opp. Country Club, Andheri West, Mumbai - 400053
+          </p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tatwamasi Foundation. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="./privacy.html">Privacy Policy</a>
+          <a href="./terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactive Donation Checkout Modal -->
+  <div id="donation-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Support Tatwamasi Foundation</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="modal-donation-form">
+          <p class="lead" style="font-size:15px; margin-bottom:20px;">Your support directly funds schools, healthcare drives, and athletic training in rural India.</p>
+          
+          <div class="form-group">
+            <label>Select Donation Amount (INR)</label>
+            <div class="donation-grid">
+              <button type="button" class="btn-amt" data-amount="1000">₹1,000</button>
+              <button type="button" class="btn-amt active" data-amount="2500">₹2,500</button>
+              <button type="button" class="btn-amt" data-amount="5000">₹5,000</button>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="custom-amount">Or enter custom amount (₹)</label>
+            <input type="number" id="custom-amount" class="form-control" value="2500" min="100" placeholder="Custom Amount">
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-name">Your Full Name*</label>
+            <input type="text" id="donor-name" class="form-control" placeholder="Arijit Sen" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="donor-email">Your Email Address*</label>
+            <input type="email" id="donor-email" class="form-control" placeholder="sen@example.com" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%; margin-top:10px;">Proceed to Secure Checkout</button>
+        </form>
+        
+        <div id="modal-success-message" style="display: none; text-align: center; padding: 20px 0;">
+          <div style="width:70px; height:70px; background:rgba(22, 163, 74, 0.1); color:var(--color-success); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:32px; margin: 0 auto 24px auto;">
+            <i class="fas fa-check"></i>
+          </div>
+          <h3>Thank You for Your Generosity!</h3>
+          <p style="margin: 12px 0 24px 0; color:var(--color-gray-600);">Your donation of <span id="success-donation-amount" style="font-weight:700; color:var(--color-dark);">₹2,500</span> has been processed successfully. An 80G tax certificate and receipt will be emailed to you shortly.</p>
+          <button type="button" id="modal-close-success" class="btn btn-primary">Back to Website</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Files -->
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
