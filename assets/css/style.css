@@ -72,6 +72,7 @@
 html {
   scroll-behavior: initial; /* Handled by Lenis */
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -1109,13 +1110,15 @@ textarea:focus-visible {
     align-items: flex-start;
     gap: 24px;
     transform: translateX(100%);
-    transition: transform var(--transition-smooth), top var(--transition-smooth), height var(--transition-smooth);
+    visibility: hidden;
+    transition: transform var(--transition-smooth), top var(--transition-smooth), height var(--transition-smooth), visibility var(--transition-smooth);
     box-shadow: var(--shadow-lg);
     z-index: 999;
     overflow-y: auto;
   }
   .nav.open {
     transform: translateX(0);
+    visibility: visible;
   }
   .nav-toggle {
     display: block;

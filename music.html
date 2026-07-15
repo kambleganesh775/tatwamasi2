@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/images/logo.jpeg" type="image/jpeg">
-<title>Music & Arts | Tatwamasi Foundation</title>
-  <meta name="description" content="Discover classical vocal, instrumental music, classical dance, and theatre programs at Aditi SurSadhanalaya.">
+<title>Aditi Sursadhanaloy | Tatwamasi Foundation</title>
+  <meta name="description" content="Discover classical vocal, instrumental music, classical dance, and theatre programs at Aditi Sursadhanaloy.">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -67,6 +67,35 @@
     .detail-grid.reverse .detail-content {
       direction: ltr;
     }
+
+    .philosophy-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    
+    .philosophy-item {
+      display: flex;
+      gap: 16px;
+    }
+    
+    .philosophy-item i {
+      color: var(--color-secondary);
+      font-size: 20px;
+      margin-top: 3px;
+    }
+    
+    .philosophy-item h4 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+    
+    .philosophy-item p {
+      font-size: 14px;
+      margin-bottom: 0;
+      color: var(--color-gray-600);
+    }
     
     @media (max-width: 1024px) {
       .detail-grid {
@@ -76,6 +105,9 @@
       .stats-strip {
         flex-direction: column;
         gap: 24px;
+      }
+      .philosophy-list {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -94,17 +126,16 @@
         <a href="./index.html" class="nav-link">Home</a>
         <a href="./about.html" class="nav-link">About Us</a>
         <div class="nav-dropdown">
-          <a href="./initiatives.html" class="nav-link dropdown-toggle active">Our Initiatives <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i></a>
+          <a href="./chapters.html" class="nav-link dropdown-toggle active">Our Chapters <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i></a>
           <div class="nav-dropdown-menu">
             <a href="./education.html">Education</a>
             <a href="./healthcare.html">Healthcare</a>
             <a href="./sports.html">Sports Academy</a>
             <a href="./music.html">Music & Arts</a>
-            <a href="./initiatives.html#environment">Environment</a>
+            <a href="./chapters.html#environment">Environment</a>
           </div>
         </div>
-        <a href="./join.html" class="nav-link">Join Mission</a>
-        <a href="./contact.html" class="nav-link">Contact</a>
+        <a href="./get-involved.html" class="nav-link">Get Involved</a>
         <button class="btn btn-primary" data-open-modal style="padding: 10px 24px; font-size:15px; margin-left: 10px;">Support Us</button>
       </nav>
       
@@ -121,9 +152,10 @@
     <section class="pillar-hero">
       <div class="container">
         <div class="reveal">
-          <span class="tagline">Pillars of Change</span>
-          <h1 style="margin-bottom: 24px;">Aditi SurSadhanalaya: Where Soul Meets Sound</h1>
-          <p class="lead" style="max-width: 800px; margin-bottom: 0;">Preserving India's rich musical heritage while unleashing contemporary creative genius. Aditi SurSadhanalaya is a sanctuary where ancient folk traditions merge with modern creative voice, developing emotional intelligence and community pride.</p>
+          <span class="tagline">Aditi Sursadhanaloy</span>
+          <h1 style="margin-bottom: 24px;">Where Sur Meets Sadhana</h1>
+          <p class="lead" style="max-width: 800px; margin-bottom: 12px; font-weight: 700; color: var(--color-primary);">Preserving what came before us, giving room for what's new</p>
+          <p class="lead" style="max-width: 800px; margin-bottom: 0;">Music isn't extra — it's part of growing up whole. At Aditi Sursadhanaloy, we believe every child has some music in them, waiting for a chance to come out. This isn't just a music school. It's a place where old traditions and new ideas share the same room — where discipline and joy aren't opposites, and where a child's culture becomes something they're proud of, not something left behind.</p>
         </div>
         
         <div class="stats-strip reveal">
@@ -133,11 +165,58 @@
           </div>
           <div class="strip-item">
             <h4>5+</h4>
-            <p>Creative Disciplines</p>
+            <p>Ways to Create</p>
           </div>
           <div class="strip-item">
             <h4>Guru-Shishya</h4>
             <p>Adapted Training Lineage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What We Believe Section -->
+    <section class="section" style="padding-top: 40px; padding-bottom: 20px !important; background-color: var(--color-gray-50);">
+      <div class="container">
+        <div class="section-header center reveal">
+          <span class="tagline">Our Philosophy</span>
+          <h2>What We Believe</h2>
+        </div>
+        <div class="philosophy-list reveal" style="margin-top:30px;">
+          <div class="philosophy-item">
+            <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+            <div>
+              <h4>Holistic Growth</h4>
+              <p>Music builds the whole child — mind, feelings, and how they get along with others.</p>
+            </div>
+          </div>
+          <div class="philosophy-item">
+            <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+            <div>
+              <h4>Heritage</h4>
+              <p>Teaching classical traditions keeps our heritage alive, and lets it keep growing.</p>
+            </div>
+          </div>
+          <div class="philosophy-item">
+            <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+            <div>
+              <h4>Original Voice</h4>
+              <p>We push technique, but we push original voice more.</p>
+            </div>
+          </div>
+          <div class="philosophy-item">
+            <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+            <div>
+              <h4>Bonds</h4>
+              <p>Making music together builds real bonds.</p>
+            </div>
+          </div>
+          <div class="philosophy-item" style="grid-column: span 2;">
+            <i class="fas fa-check-circle" style="color:var(--color-secondary);"></i>
+            <div>
+              <h4>Expression & Healing</h4>
+              <p>Creative expression heals — it gives feelings somewhere to go, and builds confidence.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -148,11 +227,14 @@
       <div class="container">
         <div class="detail-grid reveal">
           <div class="detail-content">
-            <span class="tagline">SurSadhanalaya | Vocals</span>
-            <h2>Vocal Classes: The Art of the Human Voice</h2>
-            <p>The human voice is our first and most sacred instrument. At SurSadhanalaya, we train vocalists under an adapted Guru-Shishya lineage model. Students build firm foundations in breath management, posture, projection, and pitch alignment.</p>
-            <p>We teach classical Indian blocks (Hindustani and Carnatic scales) alongside regional folk and contemporary fusion, letting young singers build both precision and creative style.</p>
-
+            <span class="tagline">VOCAL TRAINING</span>
+            <h2>Vocal Classes</h2>
+            <h4 style="margin-top:-10px; margin-bottom:15px; color:var(--color-primary); font-weight:700;">The Human Voice, Trained Right</h4>
+            <p style="font-weight: 600; color:var(--color-dark); margin-bottom: 12px;">Classical roots, room to grow</p>
+            <p>The voice is the first instrument anyone ever has. At Aditi Sursadhanaloy, we train it seriously — rooted in Indian classical tradition, open to new styles.</p>
+            <p>We teach through the Guru-Shishya way — teacher and student, learning together, the way it's always been done here — just adapted for how students learn today.</p>
+            <p><strong>Foundation First:</strong> Students start with the basics of the voice — breathing, tone, posture, projection. Get this right, and singing lasts a lifetime.</p>
+            <p><strong>Classical Training:</strong> Training in Hindustani or Carnatic style (student's choice) — the precision, the feeling, and the room to improvise that's built into these traditions.</p>
           </div>
           <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
             <img src="./assets/images/music-performance.jpg" alt="Young student singing into a microphone at music class recital">
@@ -166,11 +248,14 @@
       <div class="container">
         <div class="detail-grid reverse reveal">
           <div class="detail-content">
-            <span class="tagline">SurSadhanalaya | Classical heritage</span>
-            <h2>Indian Instruments: Tabla & Sitar</h2>
-            <p>Indian classical instruments carry centuries of philosophical rhythm and emotional depth. We offer specialized, step-progressive modules in **Tabla** and **Sitar**, coaching students in complex taals (rhythms) and raags (melodic frameworks).</p>
-            <p>By training the next generation, we keep our ancient heritage alive, ensuring that rural youth are proud keepers of India's cultural wealth.</p>
-
+            <span class="tagline">TRADITIONAL ROOTS</span>
+            <h2>Indian Instrument Classes</h2>
+            <h4 style="margin-top:-10px; margin-bottom:15px; color:var(--color-primary); font-weight:700;">Carrying Our Tradition Forward</h4>
+            <p>Each Indian instrument carries generations of learning in it. At Aditi Sursadhanaloy, we teach two:</p>
+            <ul style="list-style:none; padding-left:0; margin-bottom:20px; direction:ltr;">
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span><strong>Tabla</strong> — Rhythm cycles (Taals), stroke technique, oral notation</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span><strong>Sitar</strong> — Raga structure, microtones (Meend), string tuning, technique</span></li>
+            </ul>
           </div>
           <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
             <img src="./assets/images/music-indian-instruments.png" alt="Traditional Indian instruments like sitar and tabla in classroom setting">
@@ -184,11 +269,15 @@
       <div class="container">
         <div class="detail-grid reveal">
           <div class="detail-content">
-            <span class="tagline">SurSadhanalaya | Global rhythms</span>
-            <h2>Western Instruments: Guitar, Drums & Piano</h2>
-            <p>Modern creators thrive when comfortable across musical languages. Our western instrument curriculum covers acoustic & bass guitar, drum rudiments, and keyboard composition.</p>
-            <p>This allows young learners in rural India to understand global notation systems, enabling future orchestration, songwriting, and fusion productions.</p>
-
+            <span class="tagline">NEW SOUNDS</span>
+            <h2>Western Instrument Classes</h2>
+            <h4 style="margin-top:-10px; margin-bottom:15px; color:var(--color-primary); font-weight:700;">New Sounds, Same Discipline</h4>
+            <p>Rooted in Indian classical training, but ready for more — our Western instrument classes help students play guitar, drums, and piano, and mix styles freely.</p>
+            <ul style="list-style:none; padding-left:0; margin-bottom:20px;">
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span><strong>Guitar</strong> — Acoustic & bass basics</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span><strong>Drums</strong> — Rhythm and coordination</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span><strong>Piano</strong> — Scales and sight-reading</span></li>
+            </ul>
           </div>
           <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
             <img src="./assets/images/music-western-instruments.png" alt="Modern music room with keyboards, acoustic guitars, and drum kits">
@@ -202,11 +291,17 @@
       <div class="container">
         <div class="detail-grid reverse reveal">
           <div class="detail-content">
-            <span class="tagline">SurSadhanalaya | Movement</span>
-            <h2>Dance: Movement as Language</h2>
-            <p>Dance is the body's oldest form of storytelling. We offer a comprehensive curriculum covering both structured Indian classical styles (Bharatanatyam / Kathak) and fluid contemporary layouts.</p>
-            <p>Our dance program enhances spatial alignment, physical coordination, self-perception, and builds team confidence during group choreography.</p>
-
+            <span class="tagline">MOVEMENT AS LANGUAGE</span>
+            <h2>Dance Classes</h2>
+            <h4 style="margin-top:-10px; margin-bottom:15px; color:var(--color-primary); font-weight:700;">Movement as Expression</h4>
+            <p>Dance came before words did. We teach both classical Indian forms and contemporary dance, because:</p>
+            <ul style="list-style:none; padding-left:0; margin-bottom:20px; direction:ltr;">
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>It builds the body, the feelings, and the mind together</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Classical forms carry generations of craft</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Contemporary dance gives room for a student's own voice</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Performing changes how a young person sees themselves</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Dancing together builds real friendships</span></li>
+            </ul>
           </div>
           <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
             <img src="./assets/images/music-dance.png" alt="Students practicing classical dance hand gestures and mudras in studio">
@@ -220,11 +315,18 @@
       <div class="container">
         <div class="detail-grid reveal">
           <div class="detail-content">
-            <span class="tagline">SurSadhanalaya | Dramatic Arts</span>
-            <h2>Theatre: The Power of Storytelling</h2>
-            <p>Theatre is a space where imagination becomes real, vulnerability becomes power, and local stories illuminate universal truths. At SurSadhanalaya, we develop young actors, scriptwriters, and set directors.</p>
-            <p>Theatre builds public speaking confidence, active listening, script analysis capabilities, and deep empathy by walking in the shoes of different characters.</p>
-
+            <span class="tagline">STORY & VOICE</span>
+            <h2>Theatre Classes</h2>
+            <h4 style="margin-top:-10px; margin-bottom:15px; color:var(--color-primary); font-weight:700;">Telling the Story, Becoming the Character</h4>
+            <p>Theatre is one of the oldest ways humans have told stories — where imagination gets real, and one person's story can speak for many. We train young actors and storytellers who use the stage to grow, not just to perform:</p>
+            <ul style="list-style:none; padding-left:0; margin-bottom:20px;">
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Builds real confidence — Being on stage changes how you see yourself</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Builds empathy — Playing another person deepens how you understand people</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Gives room for real creativity and imagination</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Sharpens thinking — Understanding character and choice takes real work</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Builds community — Theatre only works as a team</span></li>
+              <li style="margin-bottom:8px; display:flex; gap:10px;"><i class="fas fa-check-circle" style="color:var(--color-primary); margin-top:3px;"></i> <span>Tells stories that matter — Theatre can speak to real issues and real lives</span></li>
+            </ul>
           </div>
           <div class="image-wrapper" style="aspect-ratio: 1.2/1;">
             <img src="./assets/images/music-theatre.png" alt="Young children performing a dramatic play scene on a localized theater stage">
@@ -243,7 +345,7 @@
             <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
             <span>Tatwamasi Foundation</span>
           </a>
-          <p>Rooted in India, reaching every soul. A multi-pillar foundation empowering rural communities since 2022.</p>
+          <p>“Where learning, health, and culture grow together”</p>
           <div class="footer-socials">
             <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -256,19 +358,18 @@
           <h4>Explore</h4>
           <ul>
             <li><a href="./about.html">Our Story</a></li>
-            <li><a href="./initiatives.html">Our Initiatives</a></li>
-            <li><a href="./join.html">Get Involved</a></li>
-            <li><a href="./contact.html">Reach Us</a></li>
+            <li><a href="./chapters.html">Our Chapters</a></li>
+            <li><a href="./get-involved.html">Get Involved</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
-          <h4>Our Initiatives</h4>
+          <h4>Our Chapters</h4>
           <ul>
             <li><a href="./education.html">Education</a></li>
             <li><a href="./healthcare.html">Healthcare</a></li>
             <li><a href="./sports.html">Sports Academy</a></li>
-            <li><a href="./music.html">SurSadhanalay</a></li>
+            <li><a href="./music.html">Aditi Sursadhanaloy</a></li>
           </ul>
         </div>
         

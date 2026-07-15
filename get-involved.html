@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/images/logo.jpeg" type="image/jpeg">
-<title>Contact Us | Tatwamasi Foundation</title>
-  <meta name="description" content="Reach out to Tatwamasi Foundation headquarters in Mumbai.">
+<title>Tatwamasi Foundation | Empowering the Heart of India</title>
+  <meta name="description" content="Get involved with Tatwamasi Foundation. Send an inquiry or reach out to our headquarters in Mumbai.">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -100,6 +100,49 @@
         gap: 50px;
       }
     }
+    
+    /* Ways to Help Section Styles */
+    .ways-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .way-card {
+      background: var(--color-white);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: var(--shadow-premium);
+      border: 1px solid var(--color-gray-100);
+      transition: var(--transition-smooth);
+    }
+    
+    .way-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--color-primary);
+    }
+    
+    .way-card h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+    
+    .way-card p {
+      font-size: 15px;
+      color: var(--color-gray-600);
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .ways-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -116,17 +159,16 @@
         <a href="./index.html" class="nav-link">Home</a>
         <a href="./about.html" class="nav-link">About Us</a>
         <div class="nav-dropdown">
-          <a href="./initiatives.html" class="nav-link dropdown-toggle">Our Initiatives <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i></a>
+          <a href="./chapters.html" class="nav-link dropdown-toggle">Our Chapters <i class="fas fa-chevron-down" style="font-size: 11px; margin-left: 4px;"></i></a>
           <div class="nav-dropdown-menu">
             <a href="./education.html">Education</a>
             <a href="./healthcare.html">Healthcare</a>
             <a href="./sports.html">Sports Academy</a>
             <a href="./music.html">Music & Arts</a>
-            <a href="./initiatives.html#environment">Environment</a>
+            <a href="./chapters.html#environment">Environment</a>
           </div>
         </div>
-        <a href="./join.html" class="nav-link">Join Mission</a>
-        <a href="./contact.html" class="nav-link active">Contact</a>
+        <a href="./get-involved.html" class="nav-link active">Get Involved</a>
         <button class="btn btn-primary" data-open-modal style="padding: 10px 24px; font-size:15px; margin-left: 10px;">Support Us</button>
       </nav>
       
@@ -139,56 +181,86 @@
   </header>
 
   <main>
-    <!-- Contact Hero -->
+    <!-- Contact / Get Involved Hero -->
     <section class="contact-hero">
-      <div class="container">
+      <div class="container" style="text-align: center;">
         <div class="reveal">
-          <span class="tagline">Stay Connected</span>
-          <h1>Let's Create Change Together</h1>
-          <p class="lead" style="max-width: 760px; margin-bottom: 0;">Have a query about our institutes, volunteering pathways, CSR alignment, or donation audits? Reach out directly.</p>
+          <span class="tagline" style="display: inline-block; padding: 6px 16px; background-color: rgba(21, 94, 239, 0.08); color: var(--color-primary); border-radius: 50px; font-weight: 600; font-size: 13px; margin-bottom: 20px;">JOIN THE EFFORT</span>
+          <h1 style="margin-bottom: 12px; font-size: clamp(36px, 6vw, 56px);">Be the Change</h1>
+          <p class="tagline" style="color: var(--color-gray-500); font-weight: 700; font-size: 14px; letter-spacing: 0.15em; margin-bottom: 24px;">THERE'S MORE THAN ONE WAY TO GET INVOLVED <span style="margin-left: 4px;">❦</span></p>
+          <p class="lead" style="max-width: 780px; margin: 0 auto 16px auto; font-size: 18px; color: var(--color-gray-700); line-height: 1.6;">Real change needs people. You don't have to be rich, famous, or extraordinary to matter here — you just need to care, and be willing to show up.</p>
+          <p class="lead" style="max-width: 780px; margin: 0 auto; font-size: 18px; color: var(--color-gray-700); line-height: 1.6;">Whether you give your time, your skills, your support, or partner with us as an organisation — every bit adds up to real change in towns like ours.</p>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Grid Form and Address Cards -->
-    <section class="section" style="padding-top: 0;">
+    <!-- Ways to Help Cards Section -->
+    <section class="section" style="padding-top: 0; background-color: var(--color-gray-50);">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 40px;" class="reveal">
+          <span class="tagline">GET INVOLVED WITH TATWAMASI</span>
+          <h2>Ways to Help</h2>
+        </div>
+        <div class="ways-grid reveal">
+          <!-- Card 1 -->
+          <div class="way-card">
+            <div style="width: 48px; height: 48px; background: rgba(21, 94, 239, 0.05); color: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+              <i class="fas fa-magic"></i>
+            </div>
+            <h3>Give Your Skills</h3>
+            <p>Bring what you know. Teacher, doctor, designer, engineer, accountant, marketer — we can use your help.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="way-card">
+            <div style="width: 48px; height: 48px; background: rgba(21, 94, 239, 0.05); color: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+              <i class="fas fa-hand-holding-heart"></i>
+            </div>
+            <h3>Give Your Support</h3>
+            <p>Every rupee helps. Give monthly, once a year, or toward one specific project — it all matters.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="way-card">
+            <div style="width: 48px; height: 48px; background: rgba(21, 94, 239, 0.05); color: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 20px;">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <h3>Partner With Us</h3>
+            <p>For companies and organisations — employee volunteering, supplies and services, or internships. Let's build something together.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Contact Form and Head Office section -->
+    <section class="section">
       <div class="container">
         <div class="contact-grid reveal">
           
           <!-- Column 1: Info -->
           <div>
-            <h2>Contact Information</h2>
-            <p>Our administrative offices coordinate partnerships from Mumbai, while field initiatives operate directly out of rural India.</p>
+            <span class="tagline">DIRECT ACCESS</span>
+            <h2 style="margin-bottom: 24px;">Stay Connected, Create Change</h2>
             
-            <div class="info-list">
+            <div class="info-list" style="margin-top: 20px;">
               <div class="info-item">
                 <div class="info-icon"><i class="fas fa-building"></i></div>
                 <div class="info-content">
-                  <h3>Headquarters</h3>
-                  <p>Tatwamasi Foundation<br>1002 A-Wing Evershine Embassy, CHSL Veera,<br>Desai Rd, Opp. Country Club, Andheri West,<br>Mumbai - 400053</p>
+                  <h3>Head Office</h3>
+                  <p style="font-weight: 500; color: var(--color-dark);">Tatwamasi Foundation</p>
+                  <p>1002 A-Wing, Evershine Embassy CHSL, Veera,<br>Desai Rd, Opp. Country Club, Andheri West,<br>Mumbai, Maharashtra</p>
                 </div>
               </div>
-              
-
               
               <div class="info-item">
                 <div class="info-icon"><i class="fas fa-envelope"></i></div>
                 <div class="info-content">
-                  <h3>Email Contacts</h3>
-                  <p>General queries: <a href="mailto:info@tatwamasifoundation.com">info@tatwamasifoundation.com</a><br>Partnership CSR: <a href="mailto:partners@tatwamasifoundation.com">partners@tatwamasifoundation.com</a></p>
-                </div>
-              </div>
-              
-              <div class="info-item">
-                <div class="info-icon"><i class="fas fa-phone"></i></div>
-                <div class="info-content">
-                  <h3>Call Us</h3>
-                  <p>Office line: +91 22 4567 8910<br>(Mon - Fri, 10:00 AM - 6:00 PM IST)</p>
+                  <h3>Reach Us</h3>
+                  <p style="margin-bottom: 6px;"><strong style="font-weight: 600; color: var(--color-dark);">Email:</strong> <a href="mailto:hello@tatwamasifoundation.com" style="color: var(--color-primary); text-decoration: none;">hello@tatwamasifoundation.com</a></p>
+                  <p><strong style="font-weight: 600; color: var(--color-dark);">Website:</strong> <a href="./index.html" style="color: var(--color-primary); text-decoration: none;">tatwamasifoundation.com</a></p>
                 </div>
               </div>
             </div>
             
-            <div class="map-box">
+            <div class="map-box" style="margin-top: 30px;">
               <iframe 
                 src="https://maps.google.com/maps?q=Evershine%20Embassy%20CHS%20Ltd,%20Andheri%20West,%20Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                 width="100%" 
@@ -204,35 +276,34 @@
           <!-- Column 2: Form -->
           <div>
             <div class="form-card">
-              <h3 style="margin-bottom: 24px; color:var(--color-dark)">Send a Message</h3>
-              <form onsubmit="event.preventDefault(); alert('Message sent! Our communications team will respond to your email address shortly.'); this.reset();">
+              <h3 style="margin-bottom: 24px; color:var(--color-dark)">Send an Inquiry</h3>
+              <form onsubmit="event.preventDefault(); alert('Thank you for your inquiry! We will respond to your email address shortly.'); this.reset();">
                 <div class="form-group">
-                  <label for="c-name">Full Name*</label>
-                  <input type="text" id="c-name" class="form-control" placeholder="Name" required>
+                  <label for="c-name">NAME *</label>
+                  <input type="text" id="c-name" class="form-control" placeholder="Your full name" required>
                 </div>
                 <div class="form-group">
-                  <label for="c-phone">Phone Number*</label>
-                  <input type="tel" id="c-phone" class="form-control" value="+91 " placeholder="+91 " required>
+                  <label for="c-phone">PHONE NUMBER *</label>
+                  <input type="tel" id="c-phone" class="form-control" placeholder="+91 XXXXX XXXXX" required>
                 </div>
                 <div class="form-group">
-                  <label for="c-email">Email Address*</label>
-                  <input type="email" id="c-email" class="form-control" placeholder="email@domain.com" required>
+                  <label for="c-email">EMAIL ADDRESS</label>
+                  <input type="email" id="c-email" class="form-control" placeholder="you@domain.com">
                 </div>
                 <div class="form-group">
-                  <label for="c-inquiry">Inquiry Type*</label>
-                  <select id="c-inquiry" class="form-control" required>
-                    <option value="">Choose Category...</option>
-                    <option value="volunteer">Volunteer Placement</option>
-                    <option value="donate">Donation Audits & 80G</option>
-                    <option value="partner">Corporate CSR Partnerships</option>
-                    <option value="general">General Inquiries</option>
+                  <label for="c-inquiry">TYPE OF INQUIRY</label>
+                  <select id="c-inquiry" class="form-control">
+                    <option value="volunteer" selected>Volunteer</option>
+                    <option value="donate">Donate</option>
+                    <option value="partner">Partner</option>
+                    <option value="general">General Inquiry</option>
                   </select>
                 </div>
                 <div class="form-group">
-                  <label for="c-msg">Message*</label>
-                  <textarea id="c-msg" class="form-control" placeholder="Write your message here..." required></textarea>
+                  <label for="c-msg">YOUR MESSAGE</label>
+                  <textarea id="c-msg" class="form-control" placeholder="Write your thoughts or queries here..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width:100%">Submit Message</button>
+                <button type="submit" class="btn btn-primary" style="width:100%; display:flex; align-items:center; justify-content:center; gap:8px;">Send <i class="fas fa-paper-plane" style="font-size:13px;"></i></button>
               </form>
             </div>
           </div>
@@ -251,7 +322,7 @@
             <img src="./assets/images/logo.jpeg" alt="Tatwamasi Foundation Logo" class="logo-img">
             <span>Tatwamasi Foundation</span>
           </a>
-          <p>Rooted in India, reaching every soul. A multi-pillar foundation empowering rural communities since 2022.</p>
+          <p>“Where learning, health, and culture grow together”</p>
           <div class="footer-socials">
             <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -264,19 +335,18 @@
           <h4>Explore</h4>
           <ul>
             <li><a href="./about.html">Our Story</a></li>
-            <li><a href="./initiatives.html">Our Initiatives</a></li>
-            <li><a href="./join.html">Get Involved</a></li>
-            <li><a href="./contact.html">Reach Us</a></li>
+            <li><a href="./chapters.html">Our Chapters</a></li>
+            <li><a href="./get-involved.html">Get Involved</a></li>
           </ul>
         </div>
         
         <div class="footer-links">
-          <h4>Our Initiatives</h4>
+          <h4>Our Chapters</h4>
           <ul>
             <li><a href="./education.html">Education</a></li>
             <li><a href="./healthcare.html">Healthcare</a></li>
             <li><a href="./sports.html">Sports Academy</a></li>
-            <li><a href="./music.html">SurSadhanalay</a></li>
+            <li><a href="./music.html">Aditi Sursadhanaloy</a></li>
           </ul>
         </div>
         
